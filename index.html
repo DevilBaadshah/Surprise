@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05060f">
+<title>For Hezu ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#f7efff;--rose:#ffb3d6;--lav:#c9b3ff;--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#05060f;color:var(--ink);font-family:var(--serif);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,transparent 35%,rgba(3,4,14,.6) 100%)}
+#galaxy{position:fixed;top:0;left:0;width:100%;height:100vh;height:100lvh;z-index:0;pointer-events:none;display:block}
+#fx{position:fixed;top:0;left:0;right:0;bottom:0;z-index:50;pointer-events:none;overflow:hidden}
+section{position:relative;z-index:2;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12vh max(24px,env(safe-area-inset-right)) 12vh max(24px,env(safe-area-inset-left))}
+#opening,#song{overflow:hidden}
+
+/* opening */
+.corner{position:absolute;top:max(22px,env(safe-area-inset-top));left:max(24px,env(safe-area-inset-left));font:italic 500 26px var(--serif);letter-spacing:.04em;text-shadow:0 0 16px rgba(201,179,255,.8);animation:fadeIn 2s .2s both}
+.stage{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center}
+.name{margin:0;font:italic 300 clamp(84px,25vw,210px)/1 var(--serif);letter-spacing:.01em;text-shadow:0 4px 20px rgba(0,0,12,.8),0 0 30px rgba(201,179,255,.75),0 0 80px rgba(255,150,210,.45);animation:nameIn 3s .3s cubic-bezier(.2,.7,.2,1) both}
+.sub{margin:18px 0 40px;font:italic 400 clamp(19px,4.6vw,26px)/1.5 var(--serif);color:#f1e8ff;text-shadow:0 0 6px #05060f,0 2px 14px #000,0 0 24px rgba(5,6,15,.9);animation:fadeIn 1.6s 1.9s both}
+.stage .btn{animation:fadeIn 1.6s 2.9s both}
+
+/* readability layers */
+.glass{position:relative;width:min(100%,38rem);padding:clamp(30px,6vw,52px) clamp(20px,5vw,42px);border-radius:30px;background:linear-gradient(160deg,rgba(26,14,60,.74),rgba(8,8,30,.7));border:1px solid rgba(201,179,255,.22);box-shadow:0 0 50px rgba(130,90,230,.28),0 24px 60px rgba(0,0,10,.55),inset 0 0 30px rgba(255,170,230,.05);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px)}
+.stage::before{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:150%;height:160%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(4,4,18,.78),rgba(4,4,18,.5) 45%,transparent 70%);pointer-events:none}
+.pre{margin:0 0 6px;font:italic 400 clamp(19px,4.8vw,26px)/1.4 var(--serif);color:#ffd3ea;text-shadow:0 2px 12px #000;animation:fadeIn 2s .4s both}
+.kicker,.outro,.note,.soft,.sign{font-family:var(--serif);font-style:italic;text-shadow:0 0 10px rgba(5,6,15,.95),0 2px 14px #000}
+.kicker{max-width:24em;margin:0 auto 5vh;font-size:clamp(22px,5.6vw,32px);line-height:1.4;color:#ffd3ea}
+.outro{max-width:24em;margin:0 auto 6vh;font-size:clamp(20px,5vw,27px);line-height:1.55;color:#f6ecff}
+.note{margin:0;max-width:24em;font-size:clamp(20px,5vw,27px);line-height:1.6;color:#fbf4ff}
+.soft{margin:0 auto 32px;max-width:24em;font-size:clamp(20px,5vw,26px);line-height:1.6;color:#f6ecff}
+.sign{margin:30px 0 0;font-size:clamp(22px,5.5vw,30px);color:#ffc2e0}
+.glass .btn{margin-top:4px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;max-width:100%;padding:14px 32px;border-radius:999px;border:1px solid rgba(255,190,225,.55);background:linear-gradient(135deg,rgba(140,90,230,.6),rgba(235,110,180,.5));color:#fff;font:600 clamp(18px,4.8vw,22px)/1.25 var(--serif);letter-spacing:.02em;text-decoration:none;text-align:center;cursor:pointer;box-shadow:0 0 26px rgba(200,120,230,.45),inset 0 0 14px rgba(255,255,255,.12);transition:transform .3s,box-shadow .3s;-webkit-appearance:none;appearance:none}
+@media(hover:hover){.btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 40px rgba(255,150,220,.65),inset 0 0 14px rgba(255,255,255,.2)}}
+.btn:active{transform:scale(.97)}
+.btn:focus-visible{outline:2px solid #fff;outline-offset:4px}
+
+/* poem */
+#poem{padding-top:14vh;padding-bottom:14vh}
+.poem{margin:0 auto 5vh}
+.poem p{margin:0 0 .55em;font:italic 400 clamp(21px,5.4vw,30px)/1.6 var(--serif);color:#fbf4ff;text-shadow:0 0 14px rgba(201,179,255,.45),0 2px 10px rgba(0,0,10,.9)}
+.poem p:nth-child(4n+1):not(:first-child){margin-top:1.5em}
+
+/* surprise */
+.invite p{max-width:22ch;margin:0 auto 32px;font:italic 400 clamp(26px,7vw,44px)/1.35 var(--serif);text-shadow:0 0 18px rgba(201,179,255,.5),0 2px 10px #000}
+#love{display:flex;flex-direction:column;align-items:center;gap:30px;margin-top:6vh}#love.show{animation:fadeIn 1.2s both}#love .note{opacity:0}#love.show .note{animation:fadeIn 1.8s 1.8s both}
+.msg{margin:0;max-width:11em;font:italic 500 clamp(46px,13vw,108px)/1.12 var(--serif);text-wrap:balance;text-shadow:0 3px 16px rgba(0,0,12,.9),0 0 22px rgba(255,170,215,.9),0 0 60px rgba(190,140,255,.7)}
+#love.show .msg{animation:loveIn 2.2s cubic-bezier(.2,.8,.2,1) both,glow 4s 2.2s ease-in-out infinite alternate}
+#love .next{opacity:0}
+#love.show .next{animation:fadeIn 1.6s 3.2s both}
+
+/* song */
+.orb{position:absolute;width:min(90vw,560px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,150,215,.28),rgba(140,90,230,.14) 45%,transparent 70%);animation:pulse 6s ease-in-out infinite;pointer-events:none}
+.last{position:relative;max-width:16ch;margin:0 auto 44px;font:italic 400 clamp(32px,8.5vw,60px)/1.3 var(--serif);text-shadow:0 0 22px rgba(255,170,215,.7),0 2px 10px #000}
+#song .fade{position:relative;z-index:3}
+
+/* particles */
+.fly{position:absolute;z-index:2;pointer-events:none;filter:drop-shadow(0 0 8px rgba(200,170,255,.8));animation:flutter var(--d) ease-in-out infinite}
+.fly svg,.p svg{display:block;width:100%;height:auto}
+.wg{transform-box:fill-box;transform-origin:50% 50%;animation:flap .45s ease-in-out infinite alternate}
+.mote{position:absolute;z-index:2;width:3px;height:3px;border-radius:50%;background:#ffe3f4;box-shadow:0 0 8px 2px rgba(255,170,230,.6);opacity:0;pointer-events:none;animation:drift var(--t) ease-in-out infinite}
+.mote.star{width:auto;height:auto;background:none;box-shadow:none;color:#ffe6a8;font-size:calc(13px*var(--z));text-shadow:0 0 8px #ffd27d}
+.p{position:fixed;left:var(--x);will-change:transform,opacity;font-size:calc(22px*var(--s));line-height:1;opacity:0;animation-fill-mode:both;animation-timing-function:ease-in-out}
+.p.rise{bottom:-8vh;animation-name:rise}.p.fall{top:-6vh;animation-name:fall}
+.p.bf{width:calc(40px*var(--s));filter:drop-shadow(0 0 8px rgba(200,170,255,.8))}
+.p.glow{width:7px;height:7px;border-radius:50%;background:#ffe0f4;box-shadow:0 0 12px 4px rgba(255,160,220,.7)}
+.p.petal{width:14px;height:18px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#ffd0e4,#ff8fba)}
+
+.js .fade,.js .poem p{opacity:0;transform:translateY(14px);transition:opacity 1.6s ease,transform 1.6s ease}
+.js .poem p{transition-delay:calc(var(--i)*.1s)}
+.js .fade.in,.js .poem.in p{opacity:1;transform:none}
+.js .poem.fade{opacity:1;transform:none}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes nameIn{from{opacity:0;transform:scale(.92);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
+@keyframes loveIn{from{opacity:0;transform:scale(.55);filter:blur(10px)}to{opacity:1;transform:scale(1);filter:none}}
+@keyframes glow{from{text-shadow:0 3px 16px rgba(0,0,12,.9),0 0 18px rgba(255,170,215,.7),0 0 44px rgba(190,140,255,.5)}to{text-shadow:0 3px 16px rgba(0,0,12,.9),0 0 28px rgba(255,190,225,1),0 0 80px rgba(200,150,255,.85)}}
+@keyframes pulse{50%{transform:scale(1.12);opacity:.75}}
+@keyframes flap{to{transform:scaleX(.25)}}
+@keyframes flutter{0%,100%{transform:translate(0,0) rotate(-6deg)}25%{transform:translate(var(--dx),var(--dy)) rotate(8deg)}50%{transform:translate(calc(var(--dx)*.3),calc(var(--dy)*1.8)) rotate(-8deg)}75%{transform:translate(calc(var(--dx)*-.8),calc(var(--dy)*.6)) rotate(6deg)}}
+@keyframes drift{0%{opacity:0;transform:translateY(0)}50%{opacity:.9;transform:translateY(-22px)}100%{opacity:0;transform:translateY(-44px)}}
+@keyframes rise{0%{opacity:0;transform:translate3d(0,0,0) rotate(0) scale(var(--s))}12%{opacity:1}85%{opacity:.9}100%{opacity:0;transform:translate3d(var(--dx),-120vh,0) rotate(var(--r)) scale(var(--s))}}
+@keyframes fall{0%{opacity:0;transform:translate3d(0,0,0) rotate(0)}10%{opacity:1}100%{opacity:0;transform:translate3d(var(--dx),116vh,0) rotate(var(--r))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}.mote{opacity:.7}}
+</style>
+</head>
+<body>
+<canvas id="galaxy" aria-hidden="true"></canvas>
+<div id="fx" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="bfA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc2e6"/><stop offset="1" stop-color="#9d7bff"/></linearGradient>
+<linearGradient id="bfB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9fd0ff"/><stop offset="1" stop-color="#c58bff"/></linearGradient>
+</defs></svg>
+
+<main>
+<!-- 1. OPENING -->
+<section id="opening">
+  <div class="corner">Hezu</div>
+  <div class="stage">
+    <p class="pre">for the girl who owns my heart</p>
+    <h1 class="name">Hezu</h1>
+    <p class="sub">a little universe, made just for you — with every beat of my heart</p>
+    <a class="btn" href="#poem" data-go>Begin Our Story 💗</a>
+  </div>
+</section>
+
+<!-- 2. POEM -->
+<section id="poem">
+  <p class="kicker fade">Before I say anything else, read these words I wrote with all my heart, only for you…</p>
+  <div class="poem glass fade">
+    <p>I yearn to meet you,</p>
+    <p>I yearn to see those beautiful eyes of yours,</p>
+    <p>I yearn to hug you and forget my pain,</p>
+    <p>I yearn to kiss you and give life a new meaning,</p>
+    <p>And in your quiet warmth, my storms begin to fade,</p>
+    <p>Every broken piece of me finally learns where it belongs.</p>
+    <p>Your presence feels like a sunrise made just for my soul,</p>
+    <p>A gentle promise that I am not alone in this world.</p>
+    <p>I yearn for the silence we share more than any spoken word,</p>
+    <p>For the way your touch turns my trembling into peace.</p>
+    <p>If destiny allows, let my path fall into yours,</p>
+    <p>So I may love you in all the ways my heart has been waiting for.</p>
+  </div>
+  <p class="outro fade">Every line is a little piece of my heart, and every piece already belongs to you. 💞</p>
+  <a class="btn fade" href="#surprise" data-go>There’s Something I Want to Tell You 💌</a>
+</section>
+
+<!-- 3. LOVE SURPRISE -->
+<section id="surprise">
+  <div class="invite glass fade">
+    <p>And now… there’s something I’ve been wanting to tell you.</p>
+    <button class="btn" id="surprise-btn" type="button">Surprise Me ✨</button>
+  </div>
+  <div id="love" class="glass" hidden role="status" aria-live="polite">
+    <h2 class="msg">I love you, Hezu ❤️</h2>
+    <p class="note">You are my sunrise, my peace, my favourite everything. Wherever life takes us, my heart will always find its way back to you. 💞</p>
+    <a class="btn next" href="#song" data-go>One Last Surprise 🎶</a>
+  </div>
+</section>
+
+<!-- 4. SONG (last section) -->
+<section id="song">
+  <div class="orb" aria-hidden="true"></div>
+  <div class="fade glass">
+    <p class="last">One last thing, just for you, Hezu… ❤️</p>
+    <p class="soft">Press play, close your eyes, and let this song say what words never could. 🎧</p>
+    <a class="btn" id="play" href="https://youtu.be/ZsAOnmByy38?si=Wvg7x3mAFacRFeiQ" target="_blank" rel="noopener noreferrer">Play Our Song 🎶</a>
+    <p class="sign">Forever yours ♡</p>
+  </div>
+</section>
+</main>
+
+<script>
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)},
+RM=matchMedia("(prefers-reduced-motion: reduce)").matches,
+mobile=Math.min(screen.width,innerWidth)<820||/iPhone|iPad|Android/i.test(navigator.userAgent),
+rnd=function(a,b){return a+Math.random()*(b-a)};
+
+/* ---------- navigation ---------- */
+document.querySelectorAll("[data-go]").forEach(function(a){
+  a.addEventListener("click",function(e){
+    var el=$(a.getAttribute("href"));
+    if(!el)return;
+    e.preventDefault();
+    el.scrollIntoView({behavior:RM?"auto":"smooth",block:"start"});
+  });
+});
+
+/* ---------- spiral galaxy ---------- */
+try{
+var cv=$("#galaxy"),ctx=cv.getContext("2d"),W=0,H=0,dpr=1,bg,gal,stars=[],shoots=[],
+angle=0,boost=0,last=0,lastY=window.scrollY||0,nextShoot=3,BASE=RM?0:.03;
+function arm(a,t){return a+Math.log(1+t*9)*2.1}
+function bake(){
+  var S=mobile?900:1200,g=document.createElement("canvas");g.width=g.height=S;
+  var c=g.getContext("2d"),m=S/2,R=m*.96,i,t,an,x,y,r,gr,
+  arms=[0,Math.PI,Math.PI/2,Math.PI*1.5];
+  function col(t,a){var k=t<.35?[255,226,200]:t<.65?[235,170,240]:[140,160,255];return"rgba("+k[0]+","+k[1]+","+k[2]+","+a+")"}
+  function gs(){return(Math.random()+Math.random()+Math.random()-1.5)*1.3}
+  c.globalCompositeOperation="lighter";
+  for(i=0;i<80;i++){ /* nebula along the arms */
+    t=rnd(.1,.95);var ai=i<32?0:i<64?1:2+(i%2);
+    an=arm(arms[ai],t)+rnd(-.12,.12);r=t*R;x=m+Math.cos(an)*r;y=m+Math.sin(an)*r;
+    var rad=R*rnd(.06,.13);gr=c.createRadialGradient(x,y,0,x,y,rad);
+    gr.addColorStop(0,Math.random()<.4?"rgba(255,110,190,.11)":"rgba(120,90,255,.12)");
+    gr.addColorStop(1,"rgba(60,40,160,0)");c.fillStyle=gr;c.fillRect(x-rad,y-rad,rad*2,rad*2);
+  }
+  var N=mobile?9000:15000;
+  for(i=0;i<N;i++){
+    var u=Math.random(),sz,al;
+    if(u<.18){an=rnd(0,6.283);r=Math.pow(Math.random(),2)*R*.4*Math.random()+Math.random()*R*.03;x=m+Math.cos(an)*r;y=m+Math.sin(an)*r;t=r/R}
+    else if(u<.26){an=rnd(0,6.283);r=Math.sqrt(Math.random())*R;x=m+Math.cos(an)*r;y=m+Math.sin(an)*r;t=r/R}
+    else{var q=Math.random(),ai2=q<.4?0:q<.8?1:q<.9?2:3;t=Math.pow(Math.random(),.8)*.95+.04;an=arm(arms[ai2],t);r=t*R;
+      var sg=R*(.012+.045*t);x=m+Math.cos(an)*r+gs()*sg;y=m+Math.sin(an)*r+gs()*sg}
+    sz=Math.random()<.04?2.2:Math.random()<.3?1.4:.9;al=rnd(.25,.85)*(1-t*.4);
+    c.fillStyle=col(t,al);c.fillRect(x,y,sz,sz);
+  }
+  [[.34,"255,170,220",.3],[.18,"255,225,200",.42],[.07,"255,255,255",.7]].forEach(function(d){
+    var rr=R*d[0],h=c.createRadialGradient(m,m,0,m,m,rr);
+    h.addColorStop(0,"rgba("+d[1]+","+d[2]+")");h.addColorStop(1,"rgba("+d[1]+",0)");c.fillStyle=h;c.fillRect(m-rr,m-rr,rr*2,rr*2);
+  });
+  c.globalCompositeOperation="destination-in";
+  var mk=c.createRadialGradient(m,m,0,m,m,m);mk.addColorStop(0,"rgba(0,0,0,1)");mk.addColorStop(.72,"rgba(0,0,0,1)");mk.addColorStop(1,"rgba(0,0,0,0)");
+  c.fillStyle=mk;c.fillRect(0,0,S,S);
+  return g;
+}
+function draw(t){
+  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  var D=Math.min(Math.max(W,H)*1.05,W*2.2);
+  ctx.save();ctx.translate(W/2,H*.46);ctx.scale(1,.86);ctx.rotate(angle);ctx.drawImage(gal,-D/2,-D/2,D,D);ctx.restore();
+  ctx.fillStyle="#e9eaff";
+  for(var i=0;i<stars.length;i++){var s=stars[i];ctx.globalAlpha=RM?.7:.35+.65*(.5+.5*Math.sin(t*s.v+s.p));ctx.fillRect(s.x*W,s.y*H,s.s,s.s)}
+  ctx.globalAlpha=1;ctx.lineWidth=1.6;ctx.lineCap="round";
+  shoots.forEach(function(s){
+    var tx=s.x-s.vx*.12,ty=s.y-s.vy*.12,lg=ctx.createLinearGradient(tx,ty,s.x,s.y);
+    lg.addColorStop(0,"rgba(255,255,255,0)");lg.addColorStop(1,"rgba(255,255,255,"+(1-s.l/s.life)+")");
+    ctx.strokeStyle=lg;ctx.beginPath();ctx.moveTo(tx,ty);ctx.lineTo(s.x,s.y);ctx.stroke();
+  });
+}
+function resize(){
+  var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h||(w===W&&Math.abs(h-H)<2))return;
+  W=w;H=h;dpr=Math.min(window.devicePixelRatio||1,mobile?1.5:2);cv.width=W*dpr|0;cv.height=H*dpr|0;
+  bg=ctx.createRadialGradient(W/2,H*.46,0,W/2,H*.46,Math.max(W,H)*.8);
+  bg.addColorStop(0,"#1b1040");bg.addColorStop(.45,"#0b1033");bg.addColorStop(1,"#03030a");
+  stars=[];for(var i=0;i<(mobile?85:170);i++)stars.push({x:Math.random(),y:Math.random(),s:rnd(.6,1.7),p:rnd(0,6.28),v:rnd(.6,2.2)});
+  draw(0);
+}
+function frame(ts){
+  requestAnimationFrame(frame);if(document.hidden){last=0;return}
+  var dt=last?Math.min((ts-last)/1000,.05):.016;last=ts;
+  boost*=Math.exp(-dt*1.0);angle+=(BASE+boost)*dt;
+  nextShoot-=dt;if(nextShoot<=0){var a=rnd(.5,.9),v=rnd(600,900);shoots.push({x:rnd(W*.3,W),y:rnd(0,H*.45),vx:-Math.cos(a)*v,vy:Math.sin(a)*v,l:0,life:rnd(.7,1.1)});nextShoot=rnd(5,11)}
+  shoots.forEach(function(s){s.x+=s.vx*dt;s.y+=s.vy*dt;s.l+=dt});
+  shoots=shoots.filter(function(s){return s.l<s.life});
+  draw(ts/1000);
+}
+gal=bake();resize();
+var rt;addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(resize,150)});
+if(!RM){
+  addEventListener("scroll",function(){var y=window.scrollY||0,dy=y-lastY;lastY=y;boost=Math.max(-1.6,Math.min(1.6,boost+dy*.004))},{passive:true});
+  requestAnimationFrame(frame);
+}
+}catch(err){console.error("Galaxy failed:",err)}
+
+/* ---------- butterflies, motes, floating items ---------- */
+function BF(id){return'<svg viewBox="0 0 60 50" aria-hidden="true"><g class="wg"><path d="M30 24C24 3 3 0 3 14c0 10 14 13 27 11z" fill="url(#'+id+')"/><path d="M30 26C17 27 7 36 12 44c6 6 16-4 18-14z" fill="url(#'+id+')" opacity=".9"/><path d="M30 24C36 3 57 0 57 14c0 10-14 13-27 11z" fill="url(#'+id+')"/><path d="M30 26C43 27 53 36 48 44c-6 6-16-4-18-14z" fill="url(#'+id+')" opacity=".9"/></g><path d="M30 14v26" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M30 14c-2-5-5-7-7-8M30 14c2-5 5-7 7-8" stroke="#fff" stroke-width=".8" fill="none"/></svg>'}
+function motes(sec,n){
+  for(var i=0;i<n;i++){var m=document.createElement("span");m.className="mote"+(i%4?"":" star");if(!(i%4))m.textContent="✦";
+    m.style.cssText="left:"+rnd(2,98)+"%;top:"+rnd(4,96)+"%;--t:"+rnd(4,9)+"s;--z:"+rnd(.6,1.4)+";animation-delay:-"+rnd(0,9)+"s";sec.appendChild(m)}
+}
+var op=$("#opening");
+for(var i=0;i<(mobile?5:7);i++){var f=document.createElement("span");f.className="fly";f.innerHTML=BF(i%2?"bfB":"bfA");
+  f.style.cssText="left:"+rnd(6,86)+"%;top:"+rnd(12,82)+"%;--dx:"+rnd(-14,14)+"vw;--dy:"+rnd(-10,10)+"vh;--d:"+rnd(11,19)+"s;width:"+rnd(30,46)+"px;animation-delay:-"+rnd(0,12)+"s";op.appendChild(f)}
+motes(op,mobile?16:26);motes($("#song"),mobile?12:20);
+
+var fx=$("#fx"),live=0,MAX=mobile?60:110;
+function item(kind,slow){
+  var el=document.createElement("span"),fall=kind==="petal";
+  el.className="p "+kind+(fall?" fall":" rise");
+  if(kind==="heart")el.textContent=["❤️","💗","💖","💕"][Math.random()*4|0];
+  else if(kind==="flower")el.textContent=["🌸","🌷","🌺","🌼","🌹"][Math.random()*5|0];
+  else if(kind==="bf")el.innerHTML=BF(Math.random()<.5?"bfA":"bfB");
+  var d=rnd(6,11)*(slow?1.3:1);
+  el.style.cssText="--x:"+rnd(2,96)+"vw;--dx:"+rnd(-18,18)+"vw;--r:"+rnd(-200,200)+"deg;--s:"+rnd(.7,1.5).toFixed(2)+";animation-duration:"+d+"s;animation-delay:"+rnd(0,1.2)+"s";
+  el._d=d;return el;
+}
+function add(el){
+  if(live>=MAX)return;live++;fx.appendChild(el);var gone=false;
+  function done(){if(gone)return;gone=true;el.remove();live--}
+  el.addEventListener("animationend",done,{once:true});setTimeout(done,(el._d+2.5)*1000);
+}
+function burst(){
+  var k=mobile?.6:1;
+  [["heart",16],["flower",9],["petal",16],["glow",22],["bf",6]].forEach(function(p){for(var i=0;i<Math.round(p[1]*k);i++)add(item(p[0]))});
+}
+var pick=function(){return["heart","flower","bf","glow"][Math.random()*4|0]};
+
+/* ---------- surprise button ---------- */
+var btn=$("#surprise-btn"),love=$("#love"),done=false;
+btn.addEventListener("click",function(){
+  if(done)return;done=true;btn.disabled=true;btn.hidden=true;
+  love.hidden=false;void love.offsetWidth;love.classList.add("show");
+  setTimeout(function(){love.scrollIntoView({behavior:RM?"auto":"smooth",block:"center"})},350);
+  if(!RM){burst();var iv=setInterval(function(){add(item(pick()));add(item(pick()))},500);setTimeout(function(){clearInterval(iv)},9000)}
+});
+
+/* ---------- song ambience ---------- */
+var songOn=false;
+if("IntersectionObserver" in window){new IntersectionObserver(function(e){songOn=e[0].isIntersecting},{threshold:.3}).observe($("#song"))}
+if(!RM)setInterval(function(){if(songOn&&!document.hidden)add(item(Math.random()<.7?"heart":"glow",true))},1100);
+
+/* ---------- gentle fade-ins ---------- */
+document.querySelectorAll(".poem p").forEach(function(p,i){p.style.setProperty("--i",i)});
+var fades=document.querySelectorAll(".fade");
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
+  document.documentElement.classList.add("js");
+  fades.forEach(function(f){io.observe(f)});
+  setTimeout(function(){fades.forEach(function(f){var r=f.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)f.classList.add("in")})},300);
+}
+})();
+</script>
+</body>
+</html>
